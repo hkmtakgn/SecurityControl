@@ -24,10 +24,7 @@ SECRET_KEY = 'django-insecure-kopo5x+m(blq#$_2&%tr-_neh0+5qq^-3$()@p=)zgsti0to%3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    "1a3d13d9-6611-43f0-957a-391a3217d65f-00-2mxqlzu3uad4a.spock.replit.dev",
-    "127.0.0.1",
-]
+ALLOWED_HOSTS = ["*"]
 
 CSRF_TRUSTED_ORIGINS = [
     "https://1a3d13d9-6611-43f0-957a-391a3217d65f-00-2mxqlzu3uad4a.spock.replit.dev",
@@ -130,6 +127,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+import os
+STATIC_ROOT = os.path.join (BASE_DIR,"staticfiles")
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
